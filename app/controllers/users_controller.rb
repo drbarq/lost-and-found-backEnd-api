@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    # render json: User.find(params[:id])
     render json: @user
   end
 
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
 
   # user_items
   def items
-    # byebug
+    byebug
     render json: @user.items
   end 
 
