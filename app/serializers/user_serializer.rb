@@ -5,6 +5,8 @@ class UserSerializer < ActiveModel::Serializer
     self.object.items.map  do |item|
       {id: item.id,
         name: item.item_name,
+        message: item.message,
+        qrCode: item.qr_code,
         contact: item.contacts.inject({}) do |k, contact|          
           if contact.contactable_type == "Email"
             k[:emailID] = contact.contactable.id
