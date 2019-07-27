@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_17_215701) do
+ActiveRecord::Schema.define(version: 2019_07_27_154931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coffee_roasts", force: :cascade do |t|
+    t.string "roast_name"
+    t.text "roast_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.integer "item_id"
@@ -34,10 +41,11 @@ ActiveRecord::Schema.define(version: 2019_07_17_215701) do
 
   create_table "items", force: :cascade do |t|
     t.integer "user_id"
-    t.string "item_type"
     t.string "item_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "message"
+    t.string "qr_code"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -59,7 +67,6 @@ ActiveRecord::Schema.define(version: 2019_07_17_215701) do
     t.string "contact_number"
     t.string "email_address"
     t.string "password"
-    t.string "qr_Code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
