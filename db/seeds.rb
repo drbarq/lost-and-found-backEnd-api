@@ -43,12 +43,12 @@ drivers_id = Item.create(user_id: joe.id, item_name: "Drivers ID", message: "Did
 drivers_idcontactemail = drivers_id.contacts.create(contactable: glassesemail)
 drivers_idcontacttext = drivers_id.contacts.create(contactable: glassestext)
 
-amelia = User.create(first_name: "Amelia", last_name: "Hammerl", contact_number: "978-500-9427", email_address: "aeh393@nyu.edu", password: "Hello")
+amelia = User.create(first_name: "Amelia", last_name: "Hammerl", contact_number: "+19785009427", email_address: "aeh393@nyu.edu", password: "Hello")
 
 airpods = Item.create(user_id: amelia.id, item_name: "AirPods", message: "I wish my name was on these!", qr_code: "https://i.imgur.com/SGcW4yf.png")
-airpodsemail = Email.create(email_address: "A.Hammerl@gmail.com")
-airpodsphone = Phone.create(phone_number: "7748838732")
-airpodstext = Text.create(text_number: "7748838732")
+airpodsemail = Email.create(email_address: "aeh393@nyu.edu")
+airpodsphone = Phone.create(phone_number: "+19785009427")
+airpodstext = Text.create(text_number: "+19785009427")
 airpodscontactemail = airpods.contacts.create(contactable: airpodsemail)
 airpodscontactphone = airpods.contacts.create(contactable: airpodsphone)
 airpodscontacttext = airpods.contacts.create(contactable: airpodstext)
@@ -57,18 +57,18 @@ bbottle = Item.create(user_id: amelia.id, item_name: "Black Water Bottle", messa
 bbottleemail = Email.create(email_address: "ADog@gmail.com")
 bbottlephone = Phone.create(phone_number: "1112104670")
 bbottletext = Text.create(text_number: "888888888")
-bbottlecontactemail = bbottle.contacts.create(contactable: bbottleemail)
+bbottlecontactemail = bbottle.contacts.create(contactable: airpodsemail)
 bbottlecontactphone = bbottle.contacts.create(contactable: airpodsphone)
-bbottlecontacttext = bbottle.contacts.create(contactable: bbottletext)
+bbottlecontacttext = bbottle.contacts.create(contactable: airpodstext)
 
 
 carkeys = Item.create(user_id: amelia.id, item_name: "Car Keys", message: "Were they under the couch again?", qr_code: "https://i.imgur.com/SGcW4yf.png")
 carkeysemail = Email.create(email_address: "ophie@gmail.com")
 carkeystext = Text.create(text_number: "8587380090")
-carkeyscontactemail = carkeys.contacts.create(contactable: carkeysemail)
-carkeyscontactphone = carkeys.contacts.create(contactable: carkeystext)
+carkeyscontactemail = carkeys.contacts.create(contactable: airpodsemail)
+carkeyscontactphone = carkeys.contacts.create(contactable: airpodstext)
 
 madrivers_id = Item.create(user_id: amelia.id, item_name: "MA Drivers ID", message: "It must have fallen out, thank you!", qr_code: "https://i.imgur.com/SGcW4yf.png")
 madrivers_idemail = Email.create(email_address: "ophieAttack@gmail.com")
-madrivers_idcontactemail = madrivers_id.contacts.create(contactable: madrivers_idemail)
+madrivers_idcontactemail = madrivers_id.contacts.create(contactable: airpodsemail)
 
