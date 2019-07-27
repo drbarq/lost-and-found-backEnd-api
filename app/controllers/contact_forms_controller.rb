@@ -15,19 +15,17 @@ class ContactFormsController < ApplicationController
 
   # POST /contact_forms
   def create
-    # byebug
     item = Item.find(params[:item_id])
-    user = @item.user
+    user = item.user
 
-    item_text_number = @item.contacts[2].contactable.text_number
+    item_text_number = item.contacts[2].contactable.text_number
 
     @contact_form = ContactForm.new(contact_form_params)
-    byebug
      
     # respond_to do |format|
       if @contact_form.save
         message = "Hallelujah! Someone found your stuff! Here is the message from the cool human who found it: `#{@contact_form.findee_message}`"
-        TwilioTextMessenger.new(message).call
+        TwilioTextMessenger.new(message, item).call
         # format.html {redirect_to @contact_form, notice: "Your message was sent to the owner!  Thank you for being awesome!" }
         render json: @contact_form, status: :created, location: @contact_form
       else
