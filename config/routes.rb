@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contact_forms
   root  'users#index' 
   resources :items, :users
 
