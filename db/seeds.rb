@@ -72,3 +72,7 @@ madrivers_id = Item.create(user_id: amelia.id, item_name: "MA Drivers ID", messa
 madrivers_idemail = Email.create(email_address: "ophieAttack@gmail.com")
 madrivers_idcontactemail = madrivers_id.contacts.create(contactable: airpodsemail)
 
+sarah = User.create(first_name: "Sarah", last_name: "Tustin", contact_number: "+12672107670", email_address: "sarah.tustin@gmail.com", password: "Hello")
+sarahairpods = Item.create(user_id: sarah.id, item_name: "AirPods", message: "Did I leave these in an Uber?", qr_code: "https://i.imgur.com/SGcW4yf.png")
+sarahText = Text.create(text_number: "+12672107670")
+sarahTextContact = sarahairpods.contacts.create(contactable: sarahText)

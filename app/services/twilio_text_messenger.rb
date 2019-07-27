@@ -5,8 +5,12 @@ class TwilioTextMessenger
       @message = message
       @item = item
 
-      @text_number = @item.contacts[2].contactable.text_number
-    #   byebug
+      @text_contact = @item.contacts.find do |contact|
+        contact.contactable_type === "Text"
+      end 
+      
+      @text_number = @text_contact.contactable.text_number
+
     end
   
     def call
