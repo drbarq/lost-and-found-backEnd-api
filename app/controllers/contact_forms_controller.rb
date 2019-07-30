@@ -17,7 +17,7 @@ class ContactFormsController < ApplicationController
   def create
     item = Item.find(params[:item_id])
     user = item.user
-
+    # byebug
     @contact_form = ContactForm.new(contact_form_params)
      
       if @contact_form.save
@@ -27,7 +27,6 @@ class ContactFormsController < ApplicationController
       else
         render json: @contact_form.errors, status: :unprocessable_entity
       end
-
   end
 
   # PATCH/PUT /contact_forms/1
