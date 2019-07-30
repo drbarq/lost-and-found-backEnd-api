@@ -16,7 +16,7 @@ User.destroy_all
 
 joe = User.create(first_name: "Joe", last_name: "Tustin", contact_number: "+17204873045", email_address: "J.Tustin@gmail.com", password: "Hello")
 
-glasses = Item.create(user_id: joe.id, item_name: "My Reading Glasses", message: "Thank you for finding my item!", qr_code: "https://i.imgur.com/SGcW4yf.png")
+glasses = Item.create(user_id: joe.id, item_name: "Reading Glasses", message: "Thank you for finding my glasses!  I'm blind without them, please send me a message and I will be quick to grab them!", qr_code: "https://i.imgur.com/kxjag3S.png")
 glassesemail = Email.create(email_address: "J.Tustin@gmail.com")
 glassesphone = Phone.create(phone_number: "+17204873045")
 glassestext = Text.create(text_number: "+17204873045")
@@ -24,24 +24,21 @@ glassescontactemail = glasses.contacts.create(contactable: glassesemail)
 glassescontactphone = glasses.contacts.create(contactable: glassesphone)
 glassescontacttext = glasses.contacts.create(contactable: glassestext)
 
-bottle = Item.create(user_id: joe.id, item_name: "Water Container", message: "Thank you for finding my item! Please send me a message", qr_code: "https://i.imgur.com/SGcW4yf.png")
-bottleemail = Email.create(email_address: "JoeTustin@gmail.com")
-bottlephone = Phone.create(phone_number: "1112104670")
-bottletext = Text.create(text_number: "888888888")
+bottle = Item.create(user_id: joe.id, item_name: "Green Hydroflask", message: "Thank you for finding my Hydroflask!  That water bottle and I have been through a lot and would love it back.  Please send me a message and I will grab it!", qr_code: "https://i.imgur.com/TmtjC55.png")
 bottlecontactemail = bottle.contacts.create(contactable: glassesemail)
 bottlecontactphone = bottle.contacts.create(contactable: glassesphone)
 bottlecontacttext = bottle.contacts.create(contactable: glassestext)
 
-phone = Item.create(user_id: joe.id, item_name: "iPhone", message: "You are a saint!", qr_code: "https://i.imgur.com/SGcW4yf.png")
-# phoneemail = Email.create(email_address: "fred@gmail.com")
-phonetext = Text.create(text_number: "444777222")
-phonecontactemail = phone.contacts.create(contactable: glassesemail)
-phonecontactphone = phone.contacts.create(contactable: glassestext)
+keys = Item.create(user_id: joe.id, item_name: "Car Keys", message: "If you are reading this I have lost my keys.  Thank you for finding them.  Please send me a message because I am sure I am freaking out right now", qr_code: "https://i.imgur.com/sqT4yxh.png")
+keyscontactemail = keys.contacts.create(contactable: glassesemail)
+keyscontacttext = keys.contacts.create(contactable: glassestext)
 
-drivers_id = Item.create(user_id: joe.id, item_name: "Drivers ID", message: "Did I forget it at the bar again?", qr_code: "https://i.imgur.com/SGcW4yf.png")
-# drivers_idemail = Email.create(email_address: "fred@gmail.com")
-drivers_idcontactemail = drivers_id.contacts.create(contactable: glassesemail)
+drivers_id = Item.create(user_id: joe.id, item_name: "Drivers ID", message: "Thank you for finding my ID! Did I forget it at the bar again? Send me a message and I will swing by to pick it up!", qr_code: "https://i.imgur.com/o8U47Pz.png")
 drivers_idcontacttext = drivers_id.contacts.create(contactable: glassestext)
+
+cat = Item.create(user_id: joe.id, item_name: "HashBrown", message: "He got outside again?  Thank you for taking care of him.  He is a friendly guy as I'm sure you have noticed.  Please send me a message and I will be by to get him. Thank you!", qr_code: "https://i.imgur.com/eIrP67F.png")
+catContactText = cat.contacts.create(contactable: glassestext)
+
 
 amelia = User.create(first_name: "Amelia", last_name: "Hammerl", contact_number: "+19785009427", email_address: "aeh393@nyu.edu", password: "Hello")
 
