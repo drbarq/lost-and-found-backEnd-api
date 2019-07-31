@@ -14,7 +14,7 @@ The platform provides a direct line of communication to between two unrelated pe
 
 I wrote the backend using Ruby on Rails and hosted on Heroku.  The backend provides an API endpoint for the frontend to communicate and render user data.  Using custom routes the program is able to dynamically generate static url endpoints for each individual item.  
 
-Integrating Twillio SMS services within the backend provides the ability to dynamically generate and send messages ondemand through the lost item portal.  
+Integrating Twilio SMS services within the backend provides the ability to dynamically generate and send messages ondemand through the lost item portal.  
 
 ## Lost and Found - Data Model: Plymorphic Relationships
 
@@ -30,9 +30,9 @@ Due to the polymorphic relationship and a serilizer on the User class the api en
 
 ![alt text](https://i.imgur.com/vZcGzcu.png)
 
-## Lost and Found - Feature: Twillio Progamatic SMS 
+## Lost and Found - Feature: Twilio Programmatic SMS
 
-By integrating Twillio Progamatic SMS within the backend the program is able to generate and dispatch all messaging through a single request.  
+By integrating Twilio Programmatic SMS within the backend the program is able to generate and dispatch all messaging through a single request.  
 
 ![alt text](https://i.imgur.com/p7pICKGm.png)
 
