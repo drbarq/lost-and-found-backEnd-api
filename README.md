@@ -14,9 +14,13 @@ I wrote the backend using Ruby on Rails and hosted on Heroku.  The backend provi
 
 Integrating Twillio SMS services within the backend provides the ability to dynamically generate and send messages ondemand through the lost item portal.  
 
-##Lost and Found - Data Model: Plymorphic Relationships
+## Lost and Found - Data Model: Plymorphic Relationships
 
 Items are able to be registered with multiple contact numbers and methods.  Using polymorphic relationships the program is able to query any piece of data from any other piece of data relevant to the user. This allows for minimal fetch requests and limits the need for managing multiple routes.  
+
+A User has many Items.  An Item has many Contacts.  An Item is Contactable through Phone, Email, and Text.
+
+![alt text](https://i.imgur.com/ppYEN6v.png)
 
 ## Lost and Found - User Serilizer
 
