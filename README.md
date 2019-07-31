@@ -33,3 +33,19 @@ Due to the polymorphic relationship and a serilizer on the User class the api en
 By integrating Twillio Progamatic SMS within the backend the program is able to generate and dispatch all messaging through a single request.  
 
 ![alt text](https://i.imgur.com/p7pICKG.png)
+
+## Lost and Found - Run Instructions 
+
+- Fork 🍴
+- Clone
+- ``` bundle install ```
+- ``` rails db:migrate ```
+- ``` rails db:seed ```
+- ``` rails s ```
+
+The app uses api keys which are stored within the encrypted Rails files.  Contact the team for access.
+
+## CONTRIBUTING
+Joe Tustin [[GitHub]](https://github.com/drbarq) [[Linkedin]](https://www.linkedin.com/in/joetustin/)
+
+
