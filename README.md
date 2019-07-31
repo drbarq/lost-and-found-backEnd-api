@@ -32,7 +32,7 @@ Due to the polymorphic relationship and a serilizer on the User class the api en
 
 By integrating Twillio Progamatic SMS within the backend the program is able to generate and dispatch all messaging through a single request.  
 
-![alt text](https://i.imgur.com/p7pICKG.png)
+![alt text](https://i.imgur.com/p7pICKGm.png)
 
 ## Lost and Found - Run Instructions 
 
