@@ -22,7 +22,7 @@ Items are able to be registered with multiple contact numbers and methods.  Usin
 
 Due to the polymorphic relationship and a serilizer on the User class the api endpoint is a single data set formatted with the relevant data points.  
 
-[Imgur](https://i.imgur.com/vZcGzcu.png)
+![alt text](https://i.imgur.com/vZcGzcu.pngg)
 
 ## Lost and Found - Feature: Twillio Progamatic SMS 
 
