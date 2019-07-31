@@ -8,20 +8,20 @@ The QR codes are technology agnostic and can be scanned with any cell phone came
 
 The platform provides a direct line of communication to between two unrelated people while maintaing a layer of privacy and anonymity for the owner and finder.
 
-# Lost and Found - Build: Backend 
+## Lost and Found - Build: Backend 
 
 I wrote the backend using Ruby on Rails and hosted on Heroku.  The backend provides an API endpoint for the frontend to communicate and render user data.  Using custom routes the program is able to dynamically generate static url endpoints for each individual item.  
 
 Integrating Twillio SMS services within the backend provides the ability to dynamically generate and send messages ondemand through the lost item portal.  
 
-# Lost and Found - Data Model: Plymorphic Relationships
+##Lost and Found - Data Model: Plymorphic Relationships
 
 Items are able to be registered with multiple contact numbers and methods.  Using polymorphic relationships the program is able to query any piece of data from any other piece of data relevant to the user. This allows for minimal fetch requests and limits the need for managing multiple routes.  
 
-# Lost and Found - User Serilizer
+## Lost and Found - User Serilizer
 
 Due to the polymorphic relationship and a serilizer on the User class the api endpoint is a single data set formatted with the relevant data points.  
 
-# Lost and Found - Feature: Twillio Progamatic SMS 
+## Lost and Found - Feature: Twillio Progamatic SMS 
 
 By integrating Twillio Progamatic SMS within the backend the program is able to generate and dispatch all messaging through a single request.  
