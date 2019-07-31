@@ -4,9 +4,9 @@ Lost and Found is an application that connects people through their lost items. 
 
 These QR codes are special though as they provide a direct line of communication between the user owner who has lost an item and the finder who has found the item.  
 
-The QR codes are technology agnostic and can be scanned with any cell phone camera without the use of additional apps.  Once scanned the landing page is unique to the item.  A message from the owner is displayed with a short form for the finder to fill out.  The fields follow a 'voice-mail' format allowing the finder to leave a short message for the owner to contact them.  
+The QR codes are technology agnostic and can be scanned with any cell phone camera without the use of additional apps. Once scanned the landing page is unique to the item.  A message from the owner is displayed with a short form for the finder to fill out.  The fields follow a 'voice-mail' format allowing the finder to leave a short message for the owner to contact them.  
 
-The platform provides a direct line of communication to between two unrelated people while maintaing a layer of privacy and anonymity for the owner and finder.
+The platform provides a direct line of communication to between two unrelated people while maintaining a layer of privacy and anonymity for the owner and finder.
 
 [Lost and Found: Frontend Repo](https://github.com/drbarq/lost-and-found-frontEnd)
 
@@ -24,7 +24,7 @@ A User has many Items.  An Item has many Contacts.  An Item is Contactable throu
 
 ![alt text](https://i.imgur.com/ppYEN6v.png)
 
-## Lost and Found - User Serilizer
+## Lost and Found - User Serializer
 
 Due to the polymorphic relationship and a serilizer on the User class the api endpoint is a single data set formatted with the relevant data points.  
 
