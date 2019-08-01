@@ -10,6 +10,10 @@ The platform provides a direct line of communication to between two unrelated pe
 
 [Lost and Found: Frontend Repo](https://github.com/drbarq/lost-and-found-frontEnd)
 
+## Lost and Found - Video 
+
+[![Vimeo](https://i.imgur.com/9zmFcX5.png)](https://vimeo.com/351468041)
+
 ## Lost and Found - Build: Backend 
 
 I wrote the backend using Ruby on Rails and hosted on Heroku.  The backend provides an API endpoint for the frontend to communicate and render user data.  Using custom routes the program is able to dynamically generate static url endpoints for each individual item.  
