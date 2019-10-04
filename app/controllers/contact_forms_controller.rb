@@ -22,7 +22,8 @@ class ContactFormsController < ApplicationController
      
     # respond_to do |format|
       if @contact_form.save
-        message = "Hallelujah! Someone found your `#{item.item_name}`! Here is the message from the cool human who found it: `#{@contact_form.findee_message}`"
+        # message = "Hallelujah! Someone found your `#{item.item_name}`! Here is the message from the cool human who found it: `#{@contact_form.findee_message}`"
+        message = "🚨Alert 🚨 Someone found your `#{item.item_name}`! Here is the message from the finder: `#{@contact_form.findee_message}`"
         TwilioTextMessenger.new(message, item).call
         # format.html {redirect_to @contact_form, notice: "Your message was sent to the owner!  Thank you for being awesome!" }
         render json: @contact_form, status: :created, location: @contact_form
