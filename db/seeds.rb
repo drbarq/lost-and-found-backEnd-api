@@ -29,7 +29,7 @@ bottlecontactemail = bottle.contacts.create(contactable: glassesemail)
 bottlecontactphone = bottle.contacts.create(contactable: glassesphone)
 bottlecontacttext = bottle.contacts.create(contactable: glassestext)
 
-keys = Item.create(user_id: joe.id, item_name: "Car Keys", message: "If you are reading this I have lost my keys.  Thank you for finding them.  Please send me a message because I am sure I am freaking out right now", qr_code: "https://i.imgur.com/sqT4yxh.png")
+keys = Item.create(user_id: joe.id, item_name: "Car Keys", message: "If you are reading this, I lost my keys.  Thank you for finding them! I am sure I am freaking out right now.  Please send me a message using the form below. Thank you for being awesome! - Joe", qr_code: "https://i.imgur.com/sqT4yxh.png")
 keyscontactemail = keys.contacts.create(contactable: glassesemail)
 keyscontacttext = keys.contacts.create(contactable: glassestext)
 
