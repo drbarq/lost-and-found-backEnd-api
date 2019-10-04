@@ -17,22 +17,17 @@ class ContactFormsController < ApplicationController
   def create
     item = Item.find(params[:item_id])
     user = item.user
-
+    # byebug
     @contact_form = ContactForm.new(contact_form_params)
      
-    # respond_to do |format|
       if @contact_form.save
         # message = "Hallelujah! Someone found your `#{item.item_name}`! Here is the message from the cool human who found it: `#{@contact_form.findee_message}`"
         message = "🚨Alert 🚨\n Someone found your `#{item.item_name}`!\n Here is the message from the finder:\n `#{@contact_form.findee_message}`"
         TwilioTextMessenger.new(message, item).call
-        # format.html {redirect_to @contact_form, notice: "Your message was sent to the owner!  Thank you for being awesome!" }
         render json: @contact_form, status: :created, location: @contact_form
       else
-        # format.html {render :new}
         render json: @contact_form.errors, status: :unprocessable_entity
       end
-    # end
-
   end
 
   # PATCH/PUT /contact_forms/1

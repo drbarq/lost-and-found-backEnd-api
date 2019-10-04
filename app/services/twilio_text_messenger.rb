@@ -14,15 +14,16 @@ class TwilioTextMessenger
     end
   
     def call
+      # byebug
       client = Twilio::REST::Client.new
-      client.messages.create({
-        # local config
-        # from: Rails.application.credentials.twilio_phone_number,
-        
-        # heroku config
-        from: ENV['HEROKU_twilio_phone_number'],
-        to: @text_number,
-        body: message
-      })
+        client.messages.create({
+          # local config
+          # from: Rails.application.credentials.twilio_phone_number,
+          
+          # heroku config
+          from: ENV['HEROKU_twilio_phone_number'],
+          to: @text_number,
+          body: message
+        })
     end
 end
